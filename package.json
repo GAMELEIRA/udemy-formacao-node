@@ -1,0 +1,23 @@
+{
+  "name": "udemy-formacao-node",
+  "version": "1.0.0",
+  "description": "Este repositório têm como objetivo alocar os projetos da formação node da udemy.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GAMELEIRA/udemy-formacao-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GAMELEIRA/udemy-formacao-node/issues"
+  },
+  "homepage": "https://github.com/GAMELEIRA/udemy-formacao-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
