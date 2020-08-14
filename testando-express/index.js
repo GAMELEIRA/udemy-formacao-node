@@ -14,6 +14,8 @@ app.get("/", (req, res) => {
 
     console.log(query);
 
+    console.log(query);
+
     res.send("Bem vindo ao guia do programador!");
 
 });

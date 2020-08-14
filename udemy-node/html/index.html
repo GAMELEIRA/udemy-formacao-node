@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios HTML</title>
+    <style>
+        #conteudo {
+            padding: 30px 30px 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exercicios HTML</h1>
+    </header>
+    <nav>
+        <a href="exercicios/teste.html">00 - Teste</a>
+        <a href="exercicios/texto1.html">01 - Texto 1 </a>
+        <a href="exercicios/texto2.html">02 - Texto 2</a>
+        <a href="exercicios/listas.html">03 - Texto 3</a>
+        <a href="exercicios/links.html">04 - Texto 4</a>
+        <a href="exercicios/tabela.html">05 - Texto 5</a>
+        <a href="exercicios/form/form.html">06 - Formulario 6</a>
+        <a href="exercicios/form/imagens.html">07 - Imagens 7</a>
+        <a href="exercicios/listasAninhadas.html">08 - Listas Aninhadas 8</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        Curso de web modermo
+    </footer>
+    <script>
+        // link.getAttribute("[gamela]")
+        document.querySelectorAll('a').forEach((link) => {
+
+            const conteudo = document.getElementById('conteudo');
+
+            link.onclick = (evento) => {
+
+                evento.preventDefault();
+
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+
+        });
+    </script>
+</body>
+
+</html>

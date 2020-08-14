@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+</head>
+
+<body>
+
+    <ul class="slider">
+
+        <li>
+            <input type="radio" id="slide1" name="slide" checked>
+            <label for="slide1"></label>
+            <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da cidade" width="513" height="342" title="Muro da Cidade por Tarso Bessa">
+        </li>
+
+        <li>
+            <input type="radio" id="slide2" name="slide">
+            <label for="slide2"></label>
+            <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro cod3r" height="342">
+        </li>
+
+        <li>
+            <input type="radio" id="slide3" name="slide">
+            <label for="slide3"></label>
+            <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+        </li>
+        <li>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width:600px)">
+        </li>
+        <li> <input type="radio" id="slide4" name="slide">
+            <label for="slide4"></label>
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+        </li>
+    </ul>
+
+    <style>
+        .slider label {
+            background-color: #000;
+            bottom: 10px;
+            cursor: pointer;
+            display: block;
+            height: 10px;
+            position: absolute;
+            width: 10px;
+            z-index: 10;
+        }
+        
+        .slider li:nth-child(1) label {
+            left: 10px;
+        }
+        
+        .slider li:nth-child(2) label {
+            left: 40px;
+        }
+        
+        .slider li:nth-child(3) label {
+            left: 70px;
+        }
+        
+        .slider input {
+            display: none;
+        }
+        
+        .circular {
+            width: 513px;
+            background-color: red;
+        }
+        
+        .slider {
+            display: block;
+            height: 293px;
+            width: 600px;
+            margin: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        
+        .slider li {
+            list-style: none;
+            position: absolute;
+        }
+        
+        .slider img {
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            vertical-align: top;
+        }
+        
+        .slider img {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .slider li input:checked~img {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+    </style>
+
+</body>
+
+</html>
